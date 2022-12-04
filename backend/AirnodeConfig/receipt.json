@@ -1,0 +1,18 @@
+{
+  "airnodeWallet": {
+    "airnodeAddress": "0x6A7F359d025aE2ebdC36E594F633b39a02Bfe88C",
+    "airnodeAddressShort": "6a7f359",
+    "airnodeXpub": "xpub6DUz9nJVxJpVieSaBesGdwRgdznuPe875cczeg6HE1RoN7Hzm9Dsty8i8T5h4ZQzm4ShkwCkT2VXwnJETQH4XjGHY6bbKdqypLin7wrxoHY"
+  },
+  "deployment": {
+    "cloudProvider": {
+      "type": "aws",
+      "region": "us-east-1",
+      "disableConcurrencyReservations": true
+    },
+    "stage": "thegraph",
+    "nodeVersion": "0.9.1",
+    "timestamp": "2022-12-04T04:52:18.277Z"
+  },
+  "success": true
+}
