@@ -6,7 +6,11 @@ import json
 app = Flask(__name__)
 CORS(app)
 
-## Sending in the graphql query and making it a Rest API
+@app.route('/', methods=['GET'])
+def index():
+    return 'Everything Working Normally'
+
+## Sending in the graphql query and making it a REST API
 @app.route('/graph', methods=['GET'])
 def theGraph():
     query = request.args.get('query')
