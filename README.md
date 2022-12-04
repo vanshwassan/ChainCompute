@@ -23,3 +23,19 @@ s Airnode config file.
 
 The page will reload when you make changes.\
 You may also see errors in the console.
+
+## API Reference
+
+#### Query the GraphQL API
+`https://hybrid-reactor-370603.el.r.appspot.com`
+
+```http
+  GET /graph
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `api_key` | `string` | **Required**. Your API key |
+| `query` | `string` | **Required**. Your GraphQL Query that you want to run |
+| `subgraph` | `string` | **Required**. Your Subgraph ID |
+
