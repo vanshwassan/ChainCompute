@@ -1,0 +1,235 @@
+{
+  "apiCredentials": [],
+  "chains": [
+    {
+      "authorizations": {
+        "requesterEndpointAuthorizations": {}
+      },
+      "authorizers": {
+        "requesterEndpointAuthorizers": []
+      },
+      "blockHistoryLimit": 300,
+      "contracts": {
+        "AirnodeRrp": "0xa0AD79D995DdeeB18a14eAef56A549A04e3Aa1Bd"
+      },
+      "id": "5",
+      "maxConcurrency": 50,
+      "minConfirmations": 0,
+      "options": {
+        "fulfillmentGasLimit": 500000,
+        "gasPriceOracle": [
+          {
+            "gasPriceStrategy": "providerRecommendedGasPrice",
+            "recommendedGasPriceMultiplier": 1.2
+          },
+          {
+            "gasPrice": {
+              "unit": "gwei",
+              "value": 10
+            },
+            "gasPriceStrategy": "constantGasPrice"
+          }
+        ],
+        "withdrawalRemainder": {
+          "unit": "wei",
+          "value": 0
+        }
+      },
+      "providers": {
+        "goerliPublic": {
+          "url": "https://goerli.reblok.io/public"
+        },
+        "goerliTestnet1": {
+          "url": "${GOERLI_TESTNET_1_PROVIDER_URL}"
+        }
+      },
+      "type": "evm"
+    },
+    {
+      "authorizations": {
+        "requesterEndpointAuthorizations": {}
+      },
+      "authorizers": {
+        "requesterEndpointAuthorizers": []
+      },
+      "blockHistoryLimit": 300,
+      "contracts": {
+        "AirnodeRrp": "0xa0AD79D995DdeeB18a14eAef56A549A04e3Aa1Bd"
+      },
+      "id": "80001",
+      "maxConcurrency": 50,
+      "minConfirmations": 0,
+      "options": {
+        "fulfillmentGasLimit": 500000,
+        "gasPriceOracle": [
+          {
+            "gasPriceStrategy": "providerRecommendedGasPrice",
+            "recommendedGasPriceMultiplier": 1.2
+          },
+          {
+            "gasPrice": {
+              "unit": "gwei",
+              "value": 10
+            },
+            "gasPriceStrategy": "constantGasPrice"
+          }
+        ],
+        "withdrawalRemainder": {
+          "unit": "wei",
+          "value": 0
+        }
+      },
+      "providers": {
+        "polygonMumbaiPublic": {
+          "url": "https://rpc-mumbai.maticvigil.com"
+        },
+        "polygonMumbaiTestnet1": {
+          "url": "${POLYGON_MUMBAI_TESTNET_1_PROVIDER_URL}"
+        }
+      },
+      "type": "evm"
+    }
+  ],
+  "nodeSettings": {
+    "airnodeWalletMnemonic": "${AIRNODE_WALLET_MNEMONIC}",
+    "cloudProvider": {
+      "disableConcurrencyReservations": true,
+      "region": "us-east-1",
+      "type": "aws"
+    },
+    "heartbeat": {
+      "apiKey": "${HEARTBEAT_API_KEY}",
+      "enabled": true,
+      "id": "${HEARTBEAT_ID}",
+      "url": "${HEARTBEAT_URL}"
+    },
+    "httpGateway": {
+      "apiKey": "${HTTP_GATEWAY_API_KEY_BETWEEN_30_TO_120_CHARACTERS}",
+      "corsOrigins": [],
+      "enabled": true,
+      "maxConcurrency": 20
+    },
+    "httpSignedDataGateway": {
+      "apiKey": "${HTTP_SIGNED_DATA_GATEWAY_API_KEY}",
+      "corsOrigins": [],
+      "enabled": true,
+      "maxConcurrency": 20
+    },
+    "logFormat": "plain",
+    "logLevel": "INFO",
+    "nodeVersion": "0.9.1",
+    "stage": "thegraph"
+  },
+  "ois": [
+    {
+      "apiSpecifications": {
+        "components": {
+          "securitySchemes": {}
+        },
+        "paths": {
+          "/graph": {
+            "get": {
+              "parameters": [
+                {
+                  "in": "query",
+                  "name": "query"
+                },
+                {
+                  "in": "query",
+                  "name": "api_key"
+                },
+                {
+                  "in": "query",
+                  "name": "subgraph"
+                }
+              ]
+            }
+          }
+        },
+        "security": {},
+        "servers": [
+          {
+            "url": "https://hybrid-reactor-370603.el.r.appspot.com"
+          }
+        ]
+      },
+      "endpoints": [
+        {
+          "fixedOperationParameters": [],
+          "name": "GET_/graph",
+          "operation": {
+            "method": "get",
+            "path": "/graph"
+          },
+          "parameters": [
+            {
+              "name": "query",
+              "operationParameter": {
+                "in": "query",
+                "name": "query"
+              },
+              "required": false
+            },
+            {
+              "name": "api_key",
+              "operationParameter": {
+                "in": "query",
+                "name": "api_key"
+              },
+              "required": false
+            },
+            {
+              "name": "subgraph",
+              "operationParameter": {
+                "in": "query",
+                "name": "subgraph"
+              },
+              "required": false
+            }
+          ],
+          "postProcessingSpecifications": [],
+          "preProcessingSpecifications": [],
+          "reservedParameters": [
+            {
+              "name": "_type"
+            },
+            {
+              "name": "_path"
+            },
+            {
+              "name": "_times"
+            }
+          ]
+        }
+      ],
+      "oisFormat": "1.2.0",
+      "title": "GraphQLAPI",
+      "version": "0.1.0"
+    }
+  ],
+  "templates": [],
+  "triggers": {
+    "http": [
+      {
+        "endpointId": "0xfd19ee2c054da313208b4a6106c336286fc6a9f72dd5d0bc8619c018c384c74a",
+        "endpointName": "GET_/graph",
+        "oisTitle": "GraphQLAPI"
+      }
+    ],
+    "httpSignedData": [
+      {
+        "endpointId": "0xfd19ee2c054da313208b4a6106c336286fc6a9f72dd5d0bc8619c018c384c74a",
+        "endpointName": "GET_/graph",
+        "oisTitle": "GraphQLAPI"
+      }
+    ],
+    "rrp": [
+      {
+        "cacheResponses": false,
+        "endpointId": "0xfd19ee2c054da313208b4a6106c336286fc6a9f72dd5d0bc8619c018c384c74a",
+        "endpointName": "GET_/graph",
+        "oisTitle": "GraphQLAPI"
+      }
+    ]
+  }
+}
