@@ -3,7 +3,8 @@ pragma solidity 0.8.9;
 
 import "@api3/airnode-protocol/contracts/rrp/requesters/RrpRequesterV0.sol";
 
-// A requester that will return the Tesla Stock Price by calling the dxFeed airnode.
+// A requester that can make requests to the Airnode.
+// We will call The Graph's API and send in the comoutation 'query' as an encoded parameter.
 
 contract Requester is RrpRequesterV0 {
     mapping(bytes32 => bool) public incomingFulfillments;
